@@ -24,12 +24,18 @@
 
 ## 默认设置
 
-- 主题：LuCI Bootstrap（和你现在截图同一套）
+- 主题：Argon
 - 语言：中文
 - 时区：Asia/Shanghai
 - 管理地址：`192.168.1.1`
 - Wi-Fi：`Arthur` / `Arthur-5G`
 - Wi-Fi 密码：`12345678`（进后台改掉）
+
+## Nikki（Clash 兼容）
+
+固件已带 Nikki / Mihomo。默认关闭，不会自动接管网络。
+刷进去后在 LuCI 的 **Nikki** 里粘贴订阅，再启用。节点切换、测速用自带的 zashboard。
+启用透明代理前，把防火墙的软件/硬件流量卸载关掉，否则分流容易失效。
 
 ## USB 随身 WiFi
 
@@ -47,4 +53,4 @@
 
 改 `.config`、`files/` 或 diy 脚本并推到 `main` 也会自动编。
 
-不装 iStore、插件商店和科学上网全家桶。要加包，把 `CONFIG_PACKAGE_xxx=y` 写进 `.config` 再编一次。
+不装 iStore 和插件商店。Nikki / Mihomo 和 Argon 已打进固件。要加别的包，把 `CONFIG_PACKAGE_xxx=y` 写进 `.config` 再编一次。

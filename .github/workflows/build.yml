@@ -85,7 +85,7 @@ jobs:
           cd openwrt
           make defconfig
           missing=0
-          for pkg in luci kmod-usb-net-rndis kmod-usb-net-cdc-ether luci-i18n-base-zh-cn luci-proto-qmi; do
+          for pkg in luci kmod-usb-net-rndis kmod-usb-net-cdc-ether luci-i18n-base-zh-cn luci-proto-qmi kmod-tun luci-app-nikki luci-theme-argon; do
             if ! grep -q "^CONFIG_PACKAGE_${pkg}=y" .config; then
               echo "MISSING PACKAGE: $pkg"
               missing=1
